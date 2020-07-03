@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@+id/navigation_dashboard">
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.program.presenter.dashboard.DashboardFragment"
+        android:label="@string/general_label_dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_add_money"
+            app:destination="@id/navigation_payment_type"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_payment_type"
+        android:name="com.example.program.presenter.payment.type.TypeListFragment"
+        tools:layout="@layout/fragment_payment_type_list">
+
+        <action
+            android:id="@+id/action_fill_credit_card"
+            app:destination="@id/navigation_credit_card"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_credit_card"
+        android:name="com.example.program.presenter.payment.creditcard.CreditCardFragment"
+        tools:layout="@layout/fragment_payment_credit_card">
+
+        <action
+            android:id="@+id/action_payment_amount"
+            app:destination="@id/navigation_payment_amount"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim">
+
+            <argument
+                android:name="creditCard"
+                app:argType="com.example.program.domain.entity.CreditCard"
+                app:nullable="false" />
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_payment_amount"
+        android:name="com.example.program.presenter.payment.amount.AmountFragment"
+        tools:layout="@layout/fragment_payment_amount">
+
+        <argument
+            android:name="creditCard"
+            app:argType="com.example.program.domain.entity.CreditCard"
+            app:nullable="false" />
+
+        <action
+            android:id="@+id/action_payment_status"
+            app:destination="@id/navigation_payment_status"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim">
+
+            <argument
+                android:name="paymentStatus"
+                app:argType="com.example.program.domain.entity.PaymentStatus"
+                app:nullable="false" />
+
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_payment_status"
+        android:name="com.example.program.presenter.payment.status.StatusFragment"
+        tools:layout="@layout/fragment_payment_status">
+
+        <argument
+            android:name="paymentStatus"
+            app:argType="com.example.program.domain.entity.PaymentStatus"
+            app:nullable="false" />
+
+        <action
+            android:id="@+id/action_back_to_home"
+            app:destination="@id/navigation_dashboard"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@+id/main_navigation"
+            app:popUpToInclusive="true">
+
+        </action>
+    </fragment>
+
+</navigation>

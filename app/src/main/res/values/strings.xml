@@ -1,0 +1,31 @@
+<resources>
+    <string name="general_label_appName">My Application</string>
+    <string name="general_label_home">Home</string>
+    <string name="general_label_dashboard">Dashboard</string>
+    <string name="general_label_notifications">Notifications</string>
+    <string name="general_button_add">Add</string>
+    <string name="payment_label_selectHowToAddMoney">Select how to add money</string>
+    <string name="payment_label_debitOrCreditCardType">Debit or Credit Card</string>
+    <string name="payment_label_enterCardDetails">Enter card details</string>
+    <string name="payment_label_mustBeInYourName">This card must be in your name</string>
+    <string name="payment_hint_cardNumber">16 digits card number</string>
+    <string name="payment_hint_cvv">CVV</string>
+    <string name="payment_hint_expireDate">MM/YY</string>
+    <string name="general_button_continue">Continue</string>
+    <string name="payment_error_incorrectCardNumber">Enter correct card number</string>
+    <string name="payment_error_incorrectCvv">Finish this field</string>
+    <string name="payment_error_incorrectDate">Set filed</string>
+    <string name="payment_label_howMuchToAdd">How much do you want to add</string>
+    <string name="general_button_change">Change</string>
+    <string name="payment_label_addMoneyWith">Add money with</string>
+    <string name="payment_label_cardDetails">Card Details</string>
+    <string name="payment_label_paymentStatus">Payment status</string>
+    <string name="payment_label_paymentSuccess">Payment Success</string>
+    <string name="payment_label_type">Type</string>
+    <string name="payment_label_card">Card</string>
+    <string name="payment_label_cardNumber">Card Number</string>
+    <string name="payment_label_expiryDate">Expiry date</string>
+    <string name="payment_label_cvv">CVV</string>
+    <string name="payment_label_amount">Amount</string>
+    <string name="payment_button_returnHome">Return Home</string>
+</resources>

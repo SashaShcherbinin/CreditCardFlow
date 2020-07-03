@@ -1,0 +1,28 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="toolbarStyle">@style/Widget.Toolbar</item>
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Widget.Toolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="maxButtonHeight">?actionBarSize</item>
+        <item name="android:background">?android:colorBackground</item>
+        <item name="titleTextAppearance">@style/TextAppearance.Toolbar.Title</item>
+        <item name="subtitleTextAppearance">@style/TextAppearance.Toolbar.Subtitle</item>
+    </style>
+
+    <style name="TextAppearance.Toolbar.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">?colorOnBackground</item>
+    </style>
+
+    <style name="TextAppearance.Toolbar.Subtitle" parent="TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?colorOnBackground</item>
+    </style>
+
+</resources>
